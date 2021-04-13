@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<!-- have to remove this and add a costant nav-nar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{url_for('menu_list')}}">Baavarchi</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="">Welcome {{user}}</a>
+      </div>
+      <div class="navbar-nav">
+        <a class="nav-link" href="{{url_for('order_history')}}">Order History</a>
+      </div>
+    </div>
+    <div style="width:100%;text-align:center">
+    <form action="{{ url_for('search') }}" class="" method="post">
+      <input type="text" name="searchitem" id="searchitem"  placeholder="what are you looking for?">
+      </br>
+    </form>
+  </div>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto">
+        <a class="nav-link" href="{{url_for('myCart')}}">Cart</a>
+        <a class="nav-link" href="{{url_for('logout')}}">Logout</a>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<div class="container">
+  <h4>        Click on "Order" button to place the order </h4>
+<br>
+  <div class="row">
+  
+    {% for item in foods %}
+
+    <div class="col-lg-4">
+
+        <div class="card">
+          <img class="card-img-top" src="/static/images/{{item['image_path']}}" style="width:100%">
+          <div class="card-body">
+            <div>
+              <h4 class="card-title">{{item['name']}}</h4>
+              <p class="card-text">{{item['desc']}}</p>
+              <p class="card-text">Price: Rs.{{item['price']}}</p>
+            </div>
+            <div>
+
+              <form action="{{ url_for('addToCart') }}" class="" method="post">
+                <input type="hidden" name="item" id="item"  value="{{item['name']}}" required>
+                </br>
+                <input type="hidden" name="price" id="price" value="{{item['price']}}" required>
+                </br>
+                <input type="hidden" name="food_id" id="food_id" value="{{item['food_id']}}" required>
+                <button class="btn btn-primary btn-block" type=" submit" name="{{item['food_id']}}" >ADD</button></br>
+                </form>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+    {%endfor%}
+
+</div>
+
+
+
+{% endblock %}

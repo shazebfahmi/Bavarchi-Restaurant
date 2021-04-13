@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  {% block head %}
+  <title>Admin Items</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+ <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+  {% endblock %}
+  </head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+      <!--<a class="navbar-brand" href="#">Manager</a>   -->
+
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="{{url_for('manager')}}">    Home</a></li>
+      <li class="active"><a href="{{url_for('new_dish')}}">    Add New Dish</a></li>
+      <li class="active"><a href="{{url_for('get_all_dish')}}">    Get All Dish</a></li>
+      <li class="active"><a href="{{url_for('display_order')}}">    New Order</a></li>
+      <li class="active"><a href="{{url_for('deliver_order')}}">    All Delivered Order</a></li>
+      <li class="active"><a href="{{url_for('logout')}}">    Logout</a></li>
+
+    </ul>
+
+    
+  </div>
+
+</nav>
+<div class="container">
+  {% block content %}
+  <div>
+    <h3 style="float:left;width:60%">Welcome Manager !</h3><br><br><br><br>
+    <h5><b>!!!This page is only for managerial access!!!</b></h5>
+    <p>***********************************************************************************</p>
+    <h5>Here you can:</h5>
+    <ol>
+      <li><h6>Add more dishes to restaurant menu</h6></li>
+      <li><h6>Check the menu and get all dishes present in it</h6></li>
+      <li><h6>Remove a dish from menu if it is out of stock</h6></li>
+      <li><h6>Check for new orders</h6></li>
+
+
+    </ol>
+    <p>***********************************************************************************</p>
+
+
+
+  </div>
+        </div>
+        {% endblock %}
+</html>

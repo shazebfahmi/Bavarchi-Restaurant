@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block body %}
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card top-margin">
+                        <div class="card-body p-0">
+                          <p class="font-weight-bold mb-4"><h4>Order Information</h4></p>
+                            <div class="row p-5">
+                                <div class="col-md-12">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="border-0 text-uppercase small font-weight-bold">ID</th>
+
+                                                <th class="border-0 text-uppercase small font-weight-bold">Item</th>
+                                                <th class="border-0 text-uppercase small font-weight-bold">Description</th>
+
+                                                <th class="border-0 text-uppercase small font-weight-bold">Total price</th>
+                                                <th class="border-0 text-uppercase small font-weight-bold">remove</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for items in o1 %}
+                                            <tr>
+                                                <td>{{ items['food_id']}}</td>
+                                                <td>{{ items['name'] }}</td>
+                                                <td>{{ items['description']}}</td>
+                                                <td>{{items['price'] }}</td>
+                                                <td> <div>
+                                                    <form action="{{ url_for('remove_order') }}" class="" method="post">
+                                                        <input type="hidden" name="item" value="{{items['name']}}" required>
+                                                                                                              
+                                                        <input type="hidden" name="price" value="{{items['price']}}" required>
+                                                        
+                                                        <input type="hidden" name="food_id" value="{{items['food_id']}}" required>
+
+                                                        <input type="hidden" name="price" value="{{items['price']}}" required>
+                                                        
+                                                        <button class="btn btn-primary btn-block" type=" submit">Remove</button></br>
+                                                        <br><br>
+                                                    </form>
+                                                </div></td>
+  
+                                            </tr>
+
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        <a href="{{url_for('menu_list')}}"> <button type="button">I want to order more....</button></a>
+                        <a href="{{url_for('place_order')}}"><button type="button">Place Order</button></a>
+
+                </div>
+            </div>
+        </div>
+{% endblock %}
