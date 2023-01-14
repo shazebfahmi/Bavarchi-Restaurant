@@ -1,10 +1,10 @@
-This repository is a Flask based Web application.
+This project is a Flask based Web application.
 
-Name : Bavarchi Restuarant
+Name : Bavarchi Restaurant
 
-Technology : Flask (1.1.2) and Neo4j (py2neo = 2021.0.0)
+Technology Used: Flask (1.1.2) and Neo4j (py2neo = 2021.0.0)
 
-Description : A website where users can order dishes from the menu of the "Bavarchi restuarent"
+Description : A website where users can order dishes from the menu of the "Bavarchi restaurant"
 
 OS supported : Windows 10 and Ubuntu
 
