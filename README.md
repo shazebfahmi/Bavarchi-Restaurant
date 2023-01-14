@@ -20,7 +20,7 @@ Functionalities : <br /><br />1. Manager and Users are 2 types of "login", to ac
 How to run? :   <br /><br />1. Download Neo4j desktop application from the official website "https://neo4j.com/download/" and open it.<br />
                 2. Create New project -> select the created project -> Add -> Local DBMS -> Username='neo4j' -> password='test' -> Start<br />
                 3. Now the database is up and running. We now start the Flask web application.<br />
-                4. Clone the repository by going to command promt and run : $git clone https://github.com/shazebfahmi/bavarchi_personal.git<br />
+                4. Clone the repository by going to command promt and run : $git clone  https://github.com/shazebfahmi/Bavarchi-Restaurant.git <br />
                 5. Activate the virtual environment : $venv\Scripts\activate<br />
                 6. Download the required modules : $pip install -r requirement.txt<br />
                 7. Start the flask server : $ flask run<br />
