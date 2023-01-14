@@ -8,10 +8,10 @@ Description : A website where users can order dishes from the menu of the "Bavar
 
 OS supported : Windows 10 and Ubuntu
 
-Contributors : 1. Manilal Kasera    (https://github.com/manilal14)
-               2. Monica Gaddipati  (https://github.com/MonicaGaddipati123)
-               3. Rishabh Sharma    (https://github.com/rishabhsharma03)
-               4. Shazeb Fahmi      (https://github.com/shazebfahmi)
+Contributors : 1. Manilal Kasera    (https://github.com/manilal14) \n
+               2. Monica Gaddipati  (https://github.com/MonicaGaddipati123) \n
+               3. Rishabh Sharma    (https://github.com/rishabhsharma03) \n
+               4. Shazeb Fahmi      (https://github.com/shazebfahmi) \n
                
 Functionalities : 1. Manager and Users are 2 types of "login", to access the website.
                   2. Users can add multiple food items from the menu list provided by the restuarant manager into their cart and then can finally place order.
